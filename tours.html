@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/all.css"></link>
+ 
+
+  <title>Tour - TravelGo</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      background: #fff;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .custom-navbar{
+      background: rgba(120,119,119,0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      margin-top: 0;
+    }
+
+    .navbar-brand{
+      color: rgb(113,69,3) !important;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .navbar-brand span{
+      color: #392b02;
+    }
+
+    .nav-link{
+      color: rgb(97,81,2) !important;
+      font-size: 20px;
+      margin: 0 10px;
+      transition: 0.3s;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    .nav-link:hover{
+      color: #554001 !important;
+    }
+
+    .book-btn{
+      background: transparent;
+      border: 2px solid rgb(48,38,1);
+      color: rgb(48,38,1);
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 10px 22px;
+      transition: 0.3s;
+    }
+
+    .book-btn:hover{
+      transform: scale(1.05);
+    }
+
+    /* ================= BANNER ================= */
+
+    .banner{
+      background-image: url('images/body.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+
+    .overlay{
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+
+.banner-content{
+   height: 85vh;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+   text-align: left;
+   color: rgb(21, 1, 1);
+   padding-left: 80px;
+}
+.banner-content h2{
+   font-size: 40px;
+   font-weight: 700;
+   max-width: 700px;
+   line-height: 1.4;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+    /* ================= FOOTER ================= */
+
+   
+.footer-section{
+   background: #edc840;
+background: linear-gradient(163deg, rgba(237, 200, 64, 1) 28%, rgba(255, 218, 163, 1) 48%, rgba(227, 206, 89, 1) 71%, rgba(247, 239, 223, 1) 100%);
+   color: white;
+}
+
+/* Title */
+.footer-title{
+   font-size: 28px;
+   font-weight: 700;
+   margin-bottom: 25px;
+   color: #4a3802;
+   font-family:'Times New Roman', Times, serif;
+}
+
+/* Contact */
+.footer-contact p{
+   margin-bottom: 15px;
+   color: #675100;
+   font-size: 16px;
+   line-height: 1.7;
+   font-family: Bahnschrift;
+}
+
+/* Links */
+.footer-links{
+   list-style: none;
+   padding: 0;
+}
+
+.footer-links li{
+   margin-bottom: 14px;
+   color: #514102;
+   font-size: 16px;
+   transition: 0.3s;
+   font-family: Bahnschrift;
+}
+
+.footer-links li:hover{
+   transform: translateX(5px);
+   color: #795b00;
+}
+
+/* Links Anchor */
+.footer-links li a{
+   text-decoration: none;
+   color: #534402;
+   transition: 0.3s;
+   font-family: Bahnschrift;
+}
+
+.footer-links li a:hover{
+   color: #5a4400;
+}
+
+/* QR Box */
+.qr-box{
+   background: rgba(255,255,255,0.05);
+   padding: 20px;
+   border-radius: 20px;
+}
+
+/* QR Image */
+.qr-img{
+   width: 180px;
+   height: 180px;
+   object-fit: cover;
+   border-radius: 15px;
+   background: white;
+   padding: 10px;
+}
+
+/* QR Text */
+.qr-text{
+   margin-top: 15px;
+   color: #564e02;
+   font-size: 16px;
+   font-family: Bahnschrift;
+}
+
+/* Bottom */
+.footer-bottom{
+   border-top: 1px solid rgba(255,255,255,0.1);
+   margin-top: 40px;
+   padding: 20px 0;
+   text-align: center;
+}
+
+.footer-bottom p{
+   margin: 0;
+   color: #584a01;
+   font-size: 15px;
+   font-family: Bahnschrift;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+   .footer-title{
+      font-size: 24px;
+   }
+
+   .qr-img{
+      width: 150px;
+      height: 150px;
+   }
+
+}
+/* Footer Contact Icons */
+.footer-contact p i{
+   color: white;
+   margin-right: 10px;
+   font-size: 18px;
+}
+.footer-contact p i,
+.footer-contact p span{
+   color:rgb(108, 90, 1);
+}
+
+/* ================= PACKAGES SECTION ================= */
+
+.packages-section{
+   background: #f8f8f8;
+}
+
+/* Heading */
+.package-tag{
+   color: #d4a017;
+   font-weight: 600;
+   letter-spacing: 1px;
+   font-size: 18px;
+}
+
+.package-heading{
+   font-size: 42px;
+   font-weight: 700;
+   margin-top: 10px;
+   color: #222;
+}
+
+/* Card */
+.package-card{
+   background: #fff;
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+   transition: 0.4s;
+   height: 100%;
+}
+
+.package-card:hover{
+   transform: translateY(-10px);
+}
+
+/* Image Area */
+.package-image{
+   position: relative;
+}
+
+/* Image */
+.package-img{
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+}
+
+/* Price Badge */
+.price-badge{
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   background: #f8df92;
+   color: #000;
+   padding: 10px 18px;
+   border-radius: 30px;
+   font-weight: 700;
+   font-size: 18px;
+}
+
+/* Content */
+.package-content{
+   padding: 25px;
+   text-align: center;
+}
+
+/* Title */
+.package-content h3{
+   font-size: 28px;
+   font-weight: 700;
+   margin-bottom: 20px;
+   color: #222;
+}
+
+/* Buttons Area */
+.package-buttons{
+   display: flex;
+   justify-content: center;
+   gap: 12px;
+   flex-wrap: wrap;
+}
+
+/* Book Button */
+.package-btn{
+   background: transparent;
+   border: 2px solid #d4a017;
+   color: #d4a017;
+   padding: 10px 24px;
+   border-radius: 30px;
+   font-weight: 600;
+   transition: 0.3s;
+}
+
+.package-btn:hover{
+   background: #d4a017;
+   color: white;
+}
+
+/* Call Button */
+.call-btn{
+   border: 2px solid #d4a017;
+   color: #d4a017;
+   padding: 10px 24px;
+   border-radius: 30px;
+   text-decoration: none;
+   font-weight: 600;
+   transition: 0.3s;
+   display: inline-block;
+}
+
+.call-btn:hover{
+   background: #d4a017;
+   color: white;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+   .package-heading{
+      font-size: 32px;
+   }
+
+   .package-content h3{
+      font-size: 24px;
+   }
+
+}
+/* =============================== */
+/* PREMIUM TOUR PACKAGE SECTION */
+/* =============================== */
+
+.premium-package-section{
+   background: #f8f8f8;
+}
+
+/* Heading */
+.premium-tag{
+   color: #c59d5f;
+   font-weight: 600;
+   letter-spacing: 1px;
+}
+
+.premium-heading{
+   font-size: 42px;
+   font-weight: 700;
+   color: #2c2c2c;
+   margin-top: 10px;
+}
+
+/* Card */
+.premium-card{
+   background: white;
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+   transition: 0.3s;
+   height: 100%;
+}
+
+.premium-card:hover{
+   transform: translateY(-10px);
+}
+
+/* Image Box */
+.premium-image-box{
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: 5px;
+   padding: 10px;
+}
+
+/* Main Image */
+.main-image img{
+   width: 100%;
+   height: 320px;
+   object-fit: cover;
+   border-radius: 15px;
+}
+
+/* Small Images */
+.small-images{
+   display: grid;
+   grid-template-rows: repeat(3, 1fr);
+   gap: 5px;
+}
+
+.small-images img{
+   width: 100%;
+   height: 103px;
+   object-fit: cover;
+   border-radius: 12px;
+}
+
+/* Content */
+.premium-content{
+   padding: 25px;
+   text-align: center;
+}
+
+/* Title */
+.premium-content h3{
+   font-size: 30px;
+   font-weight: 700;
+   color: #222;
+   margin-bottom: 12px;
+}
+
+/* Days */
+.tour-days{
+   color: #777;
+   font-size: 18px;
+   margin-bottom: 10px;
+}
+
+/* Price */
+.tour-price{
+   font-size: 32px;
+   font-weight: 700;
+   color: #d4a017;
+   margin-bottom: 22px;
+}
+
+/* Buttons */
+.premium-buttons{
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+/* Book Button */
+.premium-book-btn{
+   background: #d4a017;
+   color: white;
+   border: none;
+   padding: 12px 24px;
+   border-radius: 30px;
+   font-weight: 600;
+   transition: 0.3s;
+}
+
+
+.premium-book-btn:hover{
+   background: #d4a017;
+}
+
+/* Call Button */
+.premium-call-btn{
+   border: 2px solid #d4a017;
+   color: #d8a62f;
+   padding: 10px 22px;
+   border-radius: 30px;
+   text-decoration: none;
+   font-weight: 600;
+   transition: 0.3s;
+}
+
+.premium-call-btn:hover{
+   background: #d4a017;
+   color: white;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+   .premium-heading{
+      font-size: 32px;
+   }
+
+   .main-image img{
+      height: 250px;
+   }
+
+}
+.book-btn{
+   background: transparent;
+   border: 2px solid rgb(48, 38, 1);
+   color: rgb(48, 38, 1);
+   font-weight: 600;
+   border-radius: 30px;
+   padding: 10px 22px;
+   transition: 0.3s;
+   text-decoration: none;
+   display: inline-block;
+}
+
+.book-btn:hover{
+   transform: scale(1.05);
+   color: rgb(48, 38, 1);
+}
+
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 28px;
+    color: white;
+
+    z-index: 9999;
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background: #50ce82;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- ================= BANNER START ================= -->
+
+<section class="banner">
+
+  <div class="overlay">
+
+   
+      <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+      <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <span><i class="fa-solid fa-taxi"></i></span> TravelGo
+        </a>
+
+        <!-- Mobile Menu -->
+        <button class="navbar-toggler bg-light" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+  <!-- Center Links -->
+  <ul class="navbar-nav mx-auto">
+
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link active" href="about.html">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="tours.html">Tours</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="cars.html">Cars</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </li>
+
+  </ul>
+
+  <!-- Right Side Button -->
+  <div class="d-flex justify-content-lg-end justify-content-center mt-3 mt-lg-0">
+    <a href="booking.html" class="book-btn">
+      Book Now
+    </a>
+  </div>
+
+</div>
+      </div>
+
+    </nav>
+    <!-- Banner Content -->
+    <div class="banner-content">
+
+      <h2>" <span style="color: #ebb207;">Explore  </span> Beautiful Destinations <br>With <span style="color: #ebb207;">TravelGo </span>, 
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= BANNER END ================= -->
+
+<!-- ================= PACKAGES SECTION START ================= -->
+
+<section class="packages-section py-5">
+
+   <div class="container">
+
+      <!-- Heading -->
+      <div class="text-center mb-5">
+
+         <h5 class="package-tag">
+            TOUR PACKAGES
+         </h5>
+
+         <h2 class="package-heading">
+            Popular Travel Destinations
+         </h2>
+
+      </div>
+
+      <div class="row g-4">
+
+         <!-- Card 1 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/ujjain.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹2,499</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Ujjain Tour</h3>
+
+                  <div class="package-buttons">
+
+<button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 2 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/indore.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹3,499</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Indore Tour</h3>
+
+                  <div class="package-buttons">
+
+     <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 3 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/omkareshwer.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹4,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Omkareshwar Tour</h3>
+
+                  <div class="package-buttons">
+            
+                     <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 4 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/dewa.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹2,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Dewas Tour</h3>
+
+                  <div class="package-buttons">
+
+
+                     <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 5 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/jaipur.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹6,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Jaipur Tour</h3>
+
+                  <div class="package-buttons">
+
+                <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 6 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/rajisthan.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹8,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Rajasthan Tour</h3>
+
+                  <div class="package-buttons">
+
+           <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 7 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/sanchi.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹4,499</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Sanchi Tour</h3>
+
+                  <div class="package-buttons">
+
+          <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 8 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/mandu.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹5,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Mandu Tour</h3>
+
+                  <div class="package-buttons">
+
+                     <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 9 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/sawariyaseth.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹6,499</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Sawariya Seth Tour</h3>
+
+                  <div class="package-buttons">
+
+             <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 10 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/maheshwer.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹3,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Maheshwar Tour</h3>
+
+                  <div class="package-buttons">
+
+               
+                  <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 11 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/patalpani.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹2,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Patalpani Tour</h3>
+
+                  <div class="package-buttons">
+
+               <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Card 12 -->
+         <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+
+               <div class="package-image">
+                  <img src="images/sehore.jpg" class="package-img" alt="">
+                  <div class="price-badge">₹4,999</div>
+               </div>
+
+               <div class="package-content">
+                  <h3>Sehore Tour</h3>
+
+                  <div class="package-buttons">
+
+                  <button class="package-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- ================= PACKAGES SECTION END ================= -->
+<!-- Premium Tour Packages Section Start -->
+<section class="premium-package-section py-5">
+
+   <div class="container">
+
+      <!-- Heading -->
+      <div class="text-center mb-5">
+
+         <h5 class="premium-tag">
+            BEST TOUR PACKAGES
+         </h5>
+
+         <h2 class="premium-heading">
+            Explore Beautiful Destinations
+         </h2>
+
+      </div>
+
+      <div class="row g-4">
+
+         <!-- Package 1 -->
+         <div class="col-lg-3 col-md-6">
+
+            <div class="premium-card">
+
+               <!-- Image Area -->
+               <div class="premium-image-box">
+
+                  <!-- Main Image -->
+                  <div class="main-image">
+                     <img src="images/mahakall.jpg" alt="">
+                  </div>
+
+                  <!-- Small Images -->
+                  <div class="small-images">
+
+                     <img src="images/ganpatijii.jpg" alt="">
+                     <img src="images/harsidhimata.jpg" alt="">
+                     <img src="images/iskcon.jpg" alt="">
+
+                  </div>
+
+               </div>
+
+               <!-- Content -->
+               <div class="premium-content">
+
+                  <h3>Ujjain Tour</h3>
+
+                  <div class="tour-days">
+                     3 Night 4 Days
+                  </div>
+
+                  <div class="tour-price">
+                     ₹12,000/-
+                  </div>
+
+                  <div class="premium-buttons">
+
+                    
+                    <button class="premium-book-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="premium-call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+         <!-- Package 2 -->
+         <div class="col-lg-3 col-md-6">
+
+            <div class="premium-card">
+
+               <div class="premium-image-box">
+
+                  <div class="main-image">
+                     <img src="images/rajwada.jpg" alt="">
+                  </div>
+
+                  <div class="small-images">
+
+                     <img src="images/omkareshwerimg.jpg" alt="">
+                     <img src="images/anpurna.jpg" alt="">
+                     <img src="images/chappan.jpg" alt="">
+
+                  </div>
+
+               </div>
+
+               <div class="premium-content">
+
+                  <h3>Indore Tour</h3>
+
+                  <div class="tour-days">
+                     4 Night 5 Days
+                  </div>
+
+                  <div class="tour-price">
+                     ₹14,000/-
+                  </div>
+
+                  <div class="premium-buttons">
+
+            
+                    <button class="premium-book-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+                     <a href="tel:+919876543210" class="premium-call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+         <!-- Package 3 -->
+         <div class="col-lg-3 col-md-6">
+
+            <div class="premium-card">
+
+               <div class="premium-image-box">
+
+                  <div class="main-image">
+                     <img src="images/rajisthanmahal.jpg" alt="">
+                  </div>
+
+                  <div class="small-images">
+
+                     <img src="images/rajwada.jpg" alt="">
+                     <img src="images/pinkcity.jpg" alt="">
+                     <img src="images/mahal.jpg" alt="">
+
+                  </div>
+
+               </div>
+
+               <div class="premium-content">
+
+                  <h3>Jaipur Tour</h3>
+
+                  <div class="tour-days">
+                     5 Night 6 Days
+                  </div>
+
+                  <div class="tour-price">
+                     ₹18,000/-
+                  </div>
+
+                  <div class="premium-buttons">
+
+                 
+                    <button class="premium-book-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="premium-call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+         <!-- Package 4 -->
+         <div class="col-lg-3 col-md-6">
+
+            <div class="premium-card">
+
+               <div class="premium-image-box">
+
+                  <div class="main-image">
+                     <img src="images/bhopalvisit.jpg" alt="">
+                  </div>
+
+                  <div class="small-images">
+
+                     <img src="images/nadi.jpg" alt="">
+                     <img src="images/mosques.jpg" alt="">
+                     <img src="images/lake.jpg" alt="">
+
+                  </div>
+
+               </div>
+
+               <div class="premium-content">
+
+                  <h3>Bhopal Tour</h3>
+
+                  <div class="tour-days">
+                     2 Night 3 Days
+                  </div>
+
+                  <div class="tour-price">
+                     ₹9,000/-
+                  </div>
+
+                  <div class="premium-buttons">
+
+                   
+                    <button class="premium-book-btn" onclick="window.location.href='booking.html'">
+   Book Now
+</button>
+
+                     <a href="tel:+919876543210" class="premium-call-btn">
+                        Call Now
+                     </a>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+<!-- Premium Tour Packages Section End -->
+
+<!-- ================= FOOTER START ================= -->
+
+<footer class="footer-section pt-5">
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3 class="footer-title">
+          Contact Us
+        </h3>
+
+        <div class="footer-contact">
+
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Ujjain, Madhya Pradesh
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 9876543210
+          </p>
+
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            travelgo@gmail.com
+          </p>
+
+          <p>
+            <i class="fa-solid fa-clock"></i>
+            24/7 Taxi Service Available
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3 class="footer-title">
+          Quick Links
+        </h3>
+
+        <ul class="footer-links">
+
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Tour Packages</a></li>
+          <li><a href="#">Our Fleet</a></li>
+          <li><a href="#">Contact Us</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Ujjain Darshan -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3 class="footer-title">
+          Ujjain Darshan
+        </h3>
+
+        <ul class="footer-links">
+
+          <li>* Mahakaleshwar Temple</li>
+          <li>* Kal Bhairav Temple</li>
+          <li>* Harsiddhi Temple</li>
+          <li>* Ram Ghat</li>
+          <li>* Sandipani Ashram</li>
+          <li>* Mangalnath Temple</li>
+          <li>* Chintaman Ganesh</li>
+
+        </ul>
+
+      </div>
+
+      <!-- QR -->
+      <div class="col-lg-3 col-md-6 text-center">
+
+        <h3 class="footer-title">
+          Pay Now
+        </h3>
+
+        <div class="qr-box">
+
+          <img src="images/phonepay.jpg" class="qr-img" alt="">
+
+          <p class="qr-text">
+            Scan & Pay Online
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 TravelGo Tour & Travels. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<!-- ================= FOOTER END ================= -->
+
+</body>
+</html>

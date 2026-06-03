@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/all.css"></link>
+
+  
+
+  <title>Cars - TravelGo</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      background: #fff;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .custom-navbar{
+      background: rgba(120,119,119,0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      margin-top: 0;
+    }
+
+    .navbar-brand{
+      color: rgb(113,69,3) !important;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .navbar-brand span{
+      color: #392b02;
+    }
+
+    .nav-link{
+      color: rgb(97,81,2) !important;
+      font-size: 20px;
+      margin: 0 10px;
+      transition: 0.3s;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    .nav-link:hover{
+      color: #554001 !important;
+    }
+
+    .book-btn{
+      background: transparent;
+      border: 2px solid rgb(48,38,1);
+      color: rgb(48,38,1);
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 10px 22px;
+      transition: 0.3s;
+    }
+
+    .book-btn:hover{
+      transform: scale(1.05);
+    }
+
+    /* ================= BANNER ================= */
+
+    .banner{
+      background-image: url('images/body.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+
+    .overlay{
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+
+.banner-content{
+   height: 85vh;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+   text-align: left;
+   color: rgb(21, 1, 1);
+   padding-left: 80px;
+}
+.banner-content h2{
+   font-size: 40px;
+   font-weight: 700;
+   max-width: 700px;
+   line-height: 1.4;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* ================= CONTACT BOX SECTION ================= */
+
+.contact-box-section{
+   background: #f8f8f8;
+}
+
+/* Heading */
+.contact-tag{
+   color: #d4a017;
+   font-weight: 600;
+   letter-spacing: 1px;
+   font-size: 18px;
+}
+
+.contact-heading{
+   font-size: 42px;
+   font-weight: 700;
+   color: #222;
+   margin-top: 10px;
+}
+
+/* Box */
+.contact-box{
+   background: white;
+   padding: 40px 25px;
+   border-radius: 20px;
+   text-align: center;
+   display: block;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+   transition: 0.4s;
+   height: 100%;
+}
+
+.contact-box:hover{
+   transform: translateY(-10px);
+}
+
+/* Icon */
+.contact-icon{
+   width: 90px;
+   height: 90px;
+   margin: auto;
+   background: #f8df92;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 25px;
+}
+
+.contact-icon i{
+   font-size: 38px;
+   color: #222;
+}
+
+/* Heading */
+.contact-box h3{
+   font-size: 28px;
+   font-weight: 700;
+   color: #222;
+   margin-bottom: 12px;
+}
+
+/* Text */
+.contact-box p{
+   color: #666;
+   font-size: 17px;
+   margin: 0;
+}
+
+/* Hover */
+.contact-box:hover .contact-icon{
+   background: #d4a017;
+}
+
+.contact-box:hover .contact-icon i{
+   color: white;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+   .contact-heading{
+      font-size: 32px;
+   }
+
+}
+
+/* ================= ENQUIRY SECTION ================= */
+
+.enquiry-section{
+   background-image: url('images/form.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   padding: 80px 0;
+}
+
+.enquiry-box{
+   max-width: 1000px;
+   margin: auto;
+
+   background: rgba(255,255,255,0.12);
+   backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px);
+
+   border: 1px solid rgba(255,255,255,0.2);
+   border-radius: 25px;
+
+   padding: 40px;
+   text-align: center;
+
+   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.enquiry-box h2{
+   color: #000000;
+   font-size: 38px;
+   font-weight: 700;
+   margin-bottom: 10px;
+}
+
+.enquiry-box p{
+   color: #efb001;
+   margin-bottom: 30px;
+}
+
+.enquiry-input{
+   height: 55px;
+   border-radius: 50px;
+   border: 1px solid rgba(225, 178, 9, 0.3);
+
+  
+   color: rgb(10, 8, 8);
+
+   padding: 0 20px;
+}
+
+.enquiry-input::placeholder{
+   color: rgba(3, 3, 3, 0.8);
+}
+
+.enquiry-input:focus{
+   background: rgba(255,255,255,0.2);
+   color: rgb(0, 0, 0);
+   box-shadow: none;
+   border-color: #ffd34d;
+}
+
+.enquiry-btn{
+   background: #f8df92;
+   color: black;
+   border: none;
+
+   padding: 12px 35px;
+   border-radius: 50px;
+
+   font-weight: 600;
+   transition: 0.3s;
+}
+
+.enquiry-btn:hover{
+   background: black;
+   color: white;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+   .enquiry-box{
+      padding: 25px;
+   }
+
+   .enquiry-box h2{
+      font-size: 28px;
+   }
+
+}
+
+
+/* ================= MAP SECTION ================= */
+
+.map-section iframe{
+   display: block;
+   width: 100%;
+}
+
+/* ================= CONTACT CAPTION SECTION ================= */
+
+.contact-caption-section{
+   background: #f8f8f8;
+}
+
+/* Heading */
+.caption-heading{
+   font-size: 38px;
+   font-weight: 700;
+   color: #e0be0fe0;
+   max-width: 900px;
+   margin: auto;
+   line-height: 1.5;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Text */
+.caption-text{
+   font-size: 18px;
+   color: #666;
+   max-width: 850px;
+   margin: 25px auto 0;
+   line-height: 1.9;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+   .caption-heading{
+      font-size: 30px;
+   }
+
+   .caption-text{
+      font-size: 16px;
+   }
+
+}
+    /* ================= FOOTER ================= */
+
+   
+.footer-section{
+   background: #edc840;
+background: linear-gradient(163deg, rgba(237, 200, 64, 1) 28%, rgba(255, 218, 163, 1) 48%, rgba(227, 206, 89, 1) 71%, rgba(247, 239, 223, 1) 100%);
+   color: white;
+}
+
+/* Title */
+.footer-title{
+   font-size: 28px;
+   font-weight: 700;
+   margin-bottom: 25px;
+   color: #4a3802;
+   font-family:'Times New Roman', Times, serif;
+}
+
+/* Contact */
+.footer-contact p{
+   margin-bottom: 15px;
+   color: #675100;
+   font-size: 16px;
+   line-height: 1.7;
+   font-family: Bahnschrift;
+}
+
+/* Links */
+.footer-links{
+   list-style: none;
+   padding: 0;
+}
+
+.footer-links li{
+   margin-bottom: 14px;
+   color: #514102;
+   font-size: 16px;
+   transition: 0.3s;
+   font-family: Bahnschrift;
+}
+
+.footer-links li:hover{
+   transform: translateX(5px);
+   color: #795b00;
+}
+
+/* Links Anchor */
+.footer-links li a{
+   text-decoration: none;
+   color: #534402;
+   transition: 0.3s;
+   font-family: Bahnschrift;
+}
+
+.footer-links li a:hover{
+   color: #5a4400;
+}
+
+/* QR Box */
+.qr-box{
+   background: rgba(255,255,255,0.05);
+   padding: 20px;
+   border-radius: 20px;
+}
+
+/* QR Image */
+.qr-img{
+   width: 180px;
+   height: 180px;
+   object-fit: cover;
+   border-radius: 15px;
+   background: white;
+   padding: 10px;
+}
+
+/* QR Text */
+.qr-text{
+   margin-top: 15px;
+   color: #564e02;
+   font-size: 16px;
+   font-family: Bahnschrift;
+}
+
+/* Bottom */
+.footer-bottom{
+   border-top: 1px solid rgba(255,255,255,0.1);
+   margin-top: 40px;
+   padding: 20px 0;
+   text-align: center;
+}
+
+.footer-bottom p{
+   margin: 0;
+   color: #584a01;
+   font-size: 15px;
+   font-family: Bahnschrift;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+   .footer-title{
+      font-size: 24px;
+   }
+
+   .qr-img{
+      width: 150px;
+      height: 150px;
+   }
+
+}
+/* Footer Contact Icons */
+.footer-contact p i{
+   color: white;
+   margin-right: 10px;
+   font-size: 18px;
+}
+.footer-contact p i,
+.footer-contact p span{
+   color: rgb(108, 90, 1);
+}
+.book-btn{
+   background: transparent;
+   border: 2px solid rgb(48, 38, 1);
+   color: rgb(48, 38, 1);
+   font-weight: 600;
+   border-radius: 30px;
+   padding: 10px 22px;
+   transition: 0.3s;
+   text-decoration: none;
+   display: inline-block;
+}
+
+.book-btn:hover{
+   transform: scale(1.05);
+   color: rgb(48, 38, 1);
+}
+
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 28px;
+    color: white;
+
+    z-index: 9999;
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background: #50ce82;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- ================= BANNER START ================= -->
+
+<section class="banner">
+
+  <div class="overlay">
+   <!-- Navbar -->
+       <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+      <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <span><i class="fa-solid fa-taxi"></i></span> TravelGo
+        </a>
+
+        <!-- Mobile Menu -->
+        <button class="navbar-toggler bg-light" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+  <!-- Center Links -->
+  <ul class="navbar-nav mx-auto">
+
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link active" href="about.html">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="tours.html">Tours</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="cars.html">Cars</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </li>
+
+  </ul>
+
+  <!-- Right Side Button -->
+  <div class="d-flex justify-content-lg-end justify-content-center mt-3 mt-lg-0">
+    <a href="booking.html" class="book-btn">
+      Book Now
+    </a>
+  </div>
+
+</div>
+      </div>
+
+    </nav>
+
+    <!-- Banner Content -->
+    <div class="banner-content">
+
+      <h2>" <span style="color: #ebb207;"> Get  </span> In Touch With <br>With <span style="color: #ebb207;">TravelGo </span>, 
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= BANNER END ================= -->
+<!-- ================= CONTACT BOX SECTION START ================= -->
+
+<section class="contact-box-section py-5">
+
+   <div class="container">
+
+      <!-- Heading -->
+      <div class="text-center mb-5">
+
+         <h5 class="contact-tag">
+            CONTACT US
+         </h5>
+
+         <h2 class="contact-heading">
+            Get In Touch With TravelGo
+         </h2>
+
+      </div>
+
+      <div class="row g-4">
+
+         <!-- Call Box -->
+         <div class="col-lg-4 col-md-6">
+
+            <a href="tel:+919876543210" class="contact-box text-decoration-none">
+
+               <div class="contact-icon">
+                  <i class="fa-solid fa-phone"></i>
+               </div>
+
+               <h3>Call Us</h3>
+
+               <p>
+                  +91 9876543210
+               </p>
+
+            </a>
+
+         </div>
+
+         <!-- Email Box -->
+         <div class="col-lg-4 col-md-6">
+
+            <a href="mailto:travelgo@gmail.com" class="contact-box text-decoration-none">
+
+               <div class="contact-icon">
+                  <i class="fa-solid fa-envelope"></i>
+               </div>
+
+               <h3>Email Us</h3>
+
+               <p>
+                  travelgo@gmail.com
+               </p>
+
+            </a>
+
+         </div>
+
+         <!-- WhatsApp Box -->
+         <div class="col-lg-4 col-md-6">
+
+            <a href="https://wa.me/919876543210" target="_blank" class="contact-box text-decoration-none">
+
+               <div class="contact-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+               </div>
+
+               <h3>WhatsApp</h3>
+
+               <p>
+                  Chat With Us
+               </p>
+
+            </a>
+
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+
+<!-- ================= ENQUIRY FORM START ================= -->
+
+<section class="enquiry-section py-5">
+
+   <div class="container">
+
+      <div class="enquiry-box">
+
+         <h2>Quick Enquiry</h2>
+         <p>Get instant details for taxi booking & tour packages.</p>
+
+         <form>
+
+            <div class="row g-3">
+
+<input type="text" id="name" class="form-control enquiry-input" placeholder="Your Name" required>
+
+<input type="tel" id="mobile" class="form-control enquiry-input" placeholder="Mobile Number" required>
+
+<input type="text" id="enquiry" class="form-control enquiry-input" placeholder="Your Enquiry" required>
+
+<button type="button" class="enquiry-btn" onclick="sendWhatsApp()">
+   Send Enquiry
+</button>
+               </div>
+
+            </div>
+
+         </form>
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- ================= ENQUIRY FORM END ================= -->
+
+<!-- ================= CONTACT BOX SECTION END ================= -->
+ <!-- ================= MAP SECTION START ================= -->
+
+<section class="map-section">
+
+   <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117061.3185674365!2d75.725471!3d23.176466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396375d6c5f4d8d7%3A0x2a8f1f8b8f6a5e2c!2sUjjain%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+   </iframe>
+
+</section>
+
+<footer class="footer-section pt-5">
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3 class="footer-title">
+          Contact Us
+        </h3>
+
+        <div class="footer-contact">
+
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Ujjain, Madhya Pradesh
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 9876543210
+          </p>
+
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            travelgo@gmail.com
+          </p>
+
+          <p>
+            <i class="fa-solid fa-clock"></i>
+            24/7 Taxi Service Available
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3 class="footer-title">
+          Quick Links
+        </h3>
+
+        <ul class="footer-links">
+
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Tour Packages</a></li>
+          <li><a href="#">Our Fleet</a></li>
+          <li><a href="#">Contact Us</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Ujjain Darshan -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3 class="footer-title">
+          Ujjain Darshan
+        </h3>
+
+        <ul class="footer-links">
+
+          <li>* Mahakaleshwar Temple</li>
+          <li>* Kal Bhairav Temple</li>
+          <li>* Harsiddhi Temple</li>
+          <li>* Ram Ghat</li>
+          <li>* Sandipani Ashram</li>
+          <li>* Mangalnath Temple</li>
+          <li>* Chintaman Ganesh</li>
+
+        </ul>
+
+      </div>
+
+      
+      <div class="col-lg-3 col-md-6 text-center">
+
+        <h3 class="footer-title">
+          Pay Now
+        </h3>
+
+        <div class="qr-box">
+
+          <img src="images/phonepay.jpg" class="qr-img" alt="">
+
+          <p class="qr-text">
+            Scan & Pay Online
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+   
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 TravelGo Tour & Travels. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<script>
+function sendWhatsApp() {
+
+  let name = document.getElementById("name").value;
+  let mobile = document.getElementById("mobile").value;
+  let enquiry = document.getElementById("enquiry").value;
+
+  let message =
+  `Name: ${name}%0A` +
+  `Mobile: ${mobile}%0A` +
+  `Enquiry: ${enquiry}`;
+
+  let url = `https://wa.me/919876543210?text=${message}`;
+
+  window.open(url, "_blank");
+}
+</script>
+</script>
+
+</body>
+</html>
