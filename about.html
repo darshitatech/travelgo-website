@@ -27,84 +27,225 @@
     }
 
     
+    .banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* VIDEO */
+
+.banner-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+
+.custom-navbar{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar-brand{
+    color: white !important;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar-brand i{
+    color: #ebb207;
+}
+
+.nav-link{
+    color: white !important;
+    margin: 0 12px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-link:hover{
+    color: #4e3b02 !important;
+}
+
+/* DESKTOP BUTTON */
+
+.book-btn{
+    background: #ebb207;
+    color: black;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.book-btn:hover{
+    background: white;
+    color: black;
+}
+
+/* MOBILE BUTTON */
+
+.book-btn-mobile{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+    background: #ebb207;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ================= CENTER CONTENT ================= */
+
+.banner-content{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* HEADING */
+
+.banner-content h2{
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.4;
+    padding-bottom: 240px;
+    font-family: Cascadia Code;
+}
+
+.banner-content h2 span{
+    color: #2e2e2d;
+}
+
+/* PARAGRAPH */
+
+.banner-content p{
+    color: #f1f1f1;
+    font-size: 20px;
+    margin-top: 20px;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* BUTTON */
+
+.explore-btn{
+    margin-top: 30px;
+
+    background: #ebb207;
+    color: black;
+
+    padding: 14px 35px;
+
+    border-radius: 40px;
+    text-decoration: none;
+
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.explore-btn:hover{
+    background: white;
+    color: black;
+}
+
+/* ================= MOBILE VIEW ================= */
+
+@media(max-width:991px){
+
     .custom-navbar{
-      background: rgba(120,119,119,0.1);
-      backdrop-filter: blur(15px);
-      border-radius: 15px;
-      margin-top: 0;
+        padding: 12px;
     }
 
-    .navbar-brand{
-      color: rgb(113,69,3) !important;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .navbar-brand span{
-      color: #392b02;
+    .navbar-collapse{
+        background: rgba(0,0,0,0.75);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
     }
 
     .nav-link{
-      color: rgb(97,81,2) !important;
-      font-size: 20px;
-      margin: 0 10px;
-      transition: 0.3s;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: bold;
+        padding: 10px 0;
     }
 
-    .nav-link:hover{
-      color: #554001 !important;
-    }
+}
 
-    .book-btn{
-      background: transparent;
-      border: 2px solid rgb(48,38,1);
-      color: rgb(48,38,1);
-      font-weight: 600;
-      border-radius: 30px;
-      padding: 10px 22px;
-      transition: 0.3s;
-    }
+/* MOBILE TEXT */
 
-    .book-btn:hover{
-      transform: scale(1.05);
-    }
-
-    /* ================= BANNER ================= */
+@media(max-width:768px){
 
     .banner{
-      background-image: url('images/body.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      width: 100%;
-      position: relative;
+        height: 100vh;
     }
 
-    .overlay{
-      width: 100%;
-      height: 100%;
-      padding: 20px;
+    .banner-content h2{
+        font-size: 24px;
+        line-height: 1.5;
     }
 
-.banner-content{
-   height: 85vh;
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-   flex-direction: column;
-   text-align: left;
-   color: rgb(21, 1, 1);
-   padding-left: 80px;
+    .banner-content p{
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .explore-btn{
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+
 }
-.banner-content h2{
-   font-size: 40px;
-   font-weight: 700;
-   max-width: 700px;
-   line-height: 1.4;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+/* EXTRA SMALL */
+
+@media(max-width:480px){
+
+    .banner-content h1{
+        font-size: 28px;
+    }
+
+    .banner-content p{
+        font-size: 15px;
+    }
+
 }
     /* ================= ABOUT SECTION ================= */
 
@@ -305,22 +446,6 @@ background: linear-gradient(163deg, rgba(237, 200, 64, 1) 28%, rgba(255, 218, 16
 .footer-contact p span{
    color:rgb(108, 90, 1);
 }
-.book-btn{
-   background: transparent;
-   border: 2px solid rgb(48, 38, 1);
-   color: rgb(48, 38, 1);
-   font-weight: 600;
-   border-radius: 30px;
-   padding: 10px 22px;
-   transition: 0.3s;
-   text-decoration: none;
-   display: inline-block;
-}
-
-.book-btn:hover{
-   transform: scale(1.05);
-   color: rgb(48, 38, 1);
-}
 
 .whatsapp-btn {
     position: fixed;
@@ -359,74 +484,96 @@ background: linear-gradient(163deg, rgba(237, 200, 64, 1) 28%, rgba(255, 218, 16
 <!-- ================= BANNER START ================= -->
 <section class="banner">
 
-  <div class="overlay">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="banner-video">
+        <source src="videos/road.mp4" type="video/mp4">
+    </video>
 
-       <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg custom-navbar">
+    <!-- Overlay -->
+    <div class="overlay">
 
-      <div class="container-fluid">
+        <!-- ================= NAVBAR ================= -->
 
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-          <span><i class="fa-solid fa-taxi"></i></span> TravelGo
-        </a>
+        <nav class="navbar navbar-expand-lg custom-navbar">
 
-        <!-- Mobile Menu -->
-        <button class="navbar-toggler bg-light" type="button"
-        data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="container">
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-taxi"></i> TravelGo
+                </a>
 
-  <!-- Center Links -->
-  <ul class="navbar-nav mx-auto">
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler bg-light"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
 
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
-    </li>
+                    <span class="navbar-toggler-icon"></span>
 
-    <li class="nav-item">
-      <a class="nav-link active" href="about.html">About</a>
-    </li>
+                </button>
 
-    <li class="nav-item">
-      <a class="nav-link" href="tours.html">Tours</a>
-    </li>
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
 
-    <li class="nav-item">
-      <a class="nav-link" href="cars.html">Cars</a>
-    </li>
+                    <ul class="navbar-nav mx-auto">
 
-    <li class="nav-item">
-      <a class="nav-link" href="contact.html">Contact Us</a>
-    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
 
-  </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
 
-  <!-- Right Side Button -->
-  <div class="d-flex justify-content-lg-end justify-content-center mt-3 mt-lg-0">
-    <a href="booking.html" class="book-btn">
-      Book Now
-    </a>
-  </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tours.html">Tours</a>
+                        </li>
 
-</div>
-      </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cars.html">Cars</a>
+                        </li>
 
-    </nav>    <!-- Banner Content -->
-    <div class="banner-content">
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
 
-         <h2>
-                Making Every
-                <span style="color: #ebb207;">Journey Safe</span>,
-                <br>
-                Comfortable & Memorable
+                        <!-- Mobile Button -->
+                        <li class="nav-item d-lg-none mt-3">
+                            <a href="booking.html" class="book-btn-mobile">
+                                Book Now
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="booking.html" class="book-btn d-none d-lg-inline-block">
+                    Book Now
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- ================= CENTER TEXT ================= -->
+
+        <div class="banner-content">
+
+            <h2>
+              Trusted 
+                <span style="font-family: Arial Rounded MT Bold;"> Travel</span>
+                 Partner
             </h2>
-    </div>
 
-  </div>
+            
+
+
+        </div>
+
+    </div>
 
 </section>
 
